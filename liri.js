@@ -13,6 +13,9 @@ var spotify = new Spotify(keys.spotify);
 //////Required for OMDB
 var axios = require('axios');
 
+/////Required for writing to .txt files
+var fs = require('fs')
+
 ///Take in commands from the console
 var input = process.argv[2];
 var search = process.argv[3];
@@ -26,6 +29,7 @@ if (input === "spotify-this-song"){
      movieThis(search)
 } else if (input === "do-what-it-says"){
     console.log("doing what it says")
+    doThis(search)
 } else {
     console.log("Term Not Found")
 }
@@ -45,9 +49,10 @@ function spotifyThis(search){
         });
 }
 
+/////Searching through OMDB to return movie information results
 function movieThis(search){
-axios.get("https://www.omdbapi.com/?t=" + search + "&y=&plot=short&apikey=trilogy")
-    .then(function(response) {
+    axios.get("https://www.omdbapi.com/?t=" + search + "&y=&plot=short&apikey=trilogy")
+        .then(function(response) {
             console.log(
                 `--------------------------------------------------------------------
 Movie Title: ${response.data.Title}
@@ -64,4 +69,13 @@ Plot: ${response.data.Plot}`
         console.log(error);
     });
     
+}
+
+function doThis(search){
+    fs.readFile('random.txt', "utf8", function(error, data){
+        if (error) {
+            console.log(error)
+        }  var dataArr = data.split(',');
+        spotifyThis(dataArr[1]);
+    })
 }
