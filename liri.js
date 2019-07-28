@@ -24,12 +24,14 @@ if (input === "spotify-this-song"){
 
 
 
-spotify.search({ type: 'track', query: search, limit: 1 }, function(err, data) {
+spotify.search({ type: 'track', query: search, limit: 5 }, function(err, data) {
   if (err) {
     return console.log('Error occurred: ' + err);
   } 
- 
-console.log(data.tracks.items[0].album); 
+ for(var i = 0; i < 5; i++){
+    console.log(`-----------------------------------------\nArtist: ${data.tracks.items[i].artists[0].name} \nSong Title: ${data.tracks.items[i].name}\nAlbum Title: ${data.tracks.items[i].album.name}\nPreview Link: ${data.tracks.items[i].preview_url}`); 
+ }
+
 // Artist(s)
 
 
