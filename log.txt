@@ -2,3 +2,6 @@
 Input: spotify-this-song, Search: invincible
 Input: movie-this, Search: frozen
 Input: spotify-this-song, Search: We will rock you
+Input: movie-this, Search: frozen
+Input: do-what-it-says, Search: 
+Input: spotify-this-song, Search: I want it that way
