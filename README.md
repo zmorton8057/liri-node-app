@@ -14,12 +14,14 @@ The proper way to put this is [node liri.js term search]</h4>
 <h4>The next step has three different options that are typed as follows:</h4>
 
 <h3>Terms & Functionality</h3>
-    <h4>* "spotify-this-song"</h4>
-        <p>* This searches by song title and returns up to five relevant messages</p>
-    <h4>* "movie-this"</h4>
-        <p>* This searches for movies and returns information on the movie that was searched for.</p>
-    <h4>* "do-what-it-says"</h4>
-        <p>* Is special function and does not require a search term.</p>
+    <li>
+    <ul> "spotify-this-song"</ul>
+        <ul>  This searches by song title and returns up to five relevant messages</ul>
+    <ul>* "movie-this"</ul>
+        <ul>  This searches for movies and returns information on the movie that was searched for.</ul>
+    <ul>* "do-what-it-says"</ul>
+        <ul>  Is special function and does not require a search term.</ul>
+    </li>
 
 <h3>Search</h3>
 ![liri 3](/images/image3.jpg)
