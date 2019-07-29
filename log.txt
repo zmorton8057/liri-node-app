@@ -1,0 +1,4 @@
+
+Input: spotify-this-song, Search: invincible
+Input: movie-this, Search: frozen
+Input: spotify-this-song, Search: We will rock you

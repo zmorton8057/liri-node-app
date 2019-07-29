@@ -16,22 +16,27 @@ var axios = require('axios');
 /////Required for writing to .txt files
 var fs = require('fs')
 
+
 ///Take in commands from the console
 var input = process.argv[2];
-var search = process.argv[3];
+var search = process.argv.slice(3);
 
 ////Creating input(s) to be referenced from user input throughthe command line
 if (input === "spotify-this-song"){
     console.log("spotify this song")
     spotifyThis(search)
+    logText(search)
 } else if (input === "movie-this") {
      console.log("movie this")
      movieThis(search)
+     logText(search)
 } else if (input === "do-what-it-says"){
     console.log("doing what it says")
     doThis(search)
+    logText(search)
 } else {
     console.log("Term Not Found")
+    logText(search)
 }
 
 
@@ -71,11 +76,26 @@ Plot: ${response.data.Plot}`
     
 }
 
+
+////////Functionality for do-what-it-says command
 function doThis(search){
+    //// reads the random.txt file
     fs.readFile('random.txt', "utf8", function(error, data){
+        ///if error occurs log error
         if (error) {
             console.log(error)
+        ///take data from random.txt and split by comma
         }  var dataArr = data.split(',');
+        ////run spotifyThis with the data from random.txt dataArr
         spotifyThis(dataArr[1]);
     })
+}
+
+///Logging search information to the text file
+function logText(search){
+fs.appendFile('log.txt', `\nInput: ${input}, Search: ${search.join(" ")}`, function (err) {
+    if (err) 
+        return console.log(err);
+    console.log('Search Stored');
+});
 }
