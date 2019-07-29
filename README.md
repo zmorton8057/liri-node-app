@@ -10,7 +10,9 @@
 <h4>In order to run each search the user must first type "node" followed by "liri.js" separated by a space.
 The proper way to put this is [node liri.js term search]</h4>
 
-![liri 2](/images/image3.jpg)
+![liri 2](/images/image2.jpg)
+![liri 3](/images/image3.jpg)
+![liri 4](/images/image4.jpg)
 <h4>The next step has three different options that are typed as follows:</h4>
 
 <h3>Terms & Functionality</h3>
@@ -24,8 +26,7 @@ The proper way to put this is [node liri.js term search]</h4>
     </li>
 
 <h3>Search</h3>
-![liri 3](/images/image2.jpg)
+
 <h4>Enter your search term and use the "enter" button to receive your results.</h4>
 
 <h3>Results</h3>
-![liri 4](/images/image4.jpg)
