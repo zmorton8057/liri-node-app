@@ -7,6 +7,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 To run the application you must type, at least three but usually four, different items on the command line.
 
 ![liri 1](/images/image1.jpg)
+
 In order to run each search the user must first type "node" followed by "liri.js" separated by a space.
 The proper way to put this is [node liri.js term search]
 
