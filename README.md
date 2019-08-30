@@ -1,7 +1,7 @@
 # liri-node-app
 
 ### Overview
-LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in searches and returns relevant infromation to those searches.
+LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and Recognition Interface, LIRI is a Language Interpretation and Recognition Interface. LIRI will be a command line node app that takes in searches and returns relevant information to those searches.
 
 ### Instructions
 To run the application you must type, at least three but usually four, different items on the command line.
